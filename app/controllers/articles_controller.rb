@@ -15,6 +15,13 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
 
+    # Ajout de la ressource comment : en effet, nous allons directement
+    # mettre un formulaire pour les commentaores dans la vue d'un article :
+    # il faut ainsi générer une variable d'instance de commentaire pour
+    # manipuler la ressource. De plus on l'a link à son article.
+    @comment = Comment.new
+    @comment.article = @article
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @article }
