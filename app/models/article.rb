@@ -6,4 +6,7 @@ class Article < ActiveRecord::Base
   # être sauvegardée
   # Plus d'infos : http://api.rubyonrails.org/classes/ActiveModel/Validations/HelperMethods.html#method-i-validates_presence_of
   validates_presence_of :title
+
+  # Relation d'association 1-N entre Article et Comment
+  has_many :comments
 end
