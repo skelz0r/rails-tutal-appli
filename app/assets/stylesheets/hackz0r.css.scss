@@ -1,0 +1,83 @@
+@import url("http://delmaire.iiens.net/bootstrap.min.css");
+
+body {
+	h1:first-child {
+		display: none;
+	}
+
+	a {
+		margin: 10px;
+	}
+
+	form {
+		width: 80%;
+		margin: auto;
+
+		input {
+			width: 60%;
+		}
+
+		textarea {
+			width: 60%;
+		}
+
+		label {
+			display: inline;
+		}
+	}
+
+	table {
+		width: 80%;
+		margin: auto;
+		margin-top: 80px;
+		display: block;
+
+		border-bottom: 1px solid black;
+
+		tbody {
+			display: block;
+			width: 100%;
+		}
+
+		tr {
+			display: block;
+			width: 100%;
+
+			&:nth-child(2n+1) {
+				margin-top: 50px;
+			}
+
+			td {
+				display: block;
+
+				&:first-child {
+					text-align: left;
+					margin: auto;
+					width: 90%;
+					font-size: 36px;
+
+					&:before {
+						font-size: 4em;
+						vertical-align: middle;
+						content: "~";
+					}
+				}
+
+				&:nth-child(2) {
+					border-top: 1px solid black;
+					margin-top: 10px;
+					padding: 10px 80px;
+				}
+
+				&:nth-child(3), &:nth-child(4), &:nth-child(5) {
+					//display: none;
+					float: right;
+				}
+			}
+
+			&:first-child {
+				display: none;
+			}
+		}
+	}
+}
