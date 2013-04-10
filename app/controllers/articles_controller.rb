@@ -44,7 +44,11 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
+        # La ligne ci-dessous est la ligne du scaffold
+        #format.html { redirect_to @article, notice: 'Article was successfully created.' }
+        # La ligne ci-dessous permet de rediriger vers le listing des articles au lieu
+        # de l'article nouvellement créé
+        format.html { redirect_to articles_path, notice: 'Article was successfully created.' }
         format.json { render json: @article, status: :created, location: @article }
       else
         format.html { render action: "new" }
